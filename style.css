@@ -1,0 +1,335 @@
+@font-face {
+    font-family: Roboto-Bold, Roboto-Regular;
+    src: url(Roboto-Bold.ttf), url(Roboto-Regular.ttf);
+}
+.attribution { font-size: 11px; text-align: center; 
+ margin-top: 8px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+* { box-sizing: border-box;
+color: hsl(234, 29%, 20%);
+}
+body {
+    font-family: Roboto-Regular, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color:white;
+}
+main {
+    background-color:hsl(0, 0%, 100%);
+    width:100%;
+    height: auto;
+}
+
+.section2, .section4 {padding: 6.4%;}
+
+.mobileImg2  {display: none;}
+.desktopImg, .desktopImg2, .desktopImg3,.desktopImg4 {display: none;}
+.mobileImg {
+    width: 100%;
+    height: auto;
+  }
+h1 {
+    display: block;
+    font-size: 40px;
+    margin-top: 0;
+    color: hsl(234, 29%, 20%);
+    width: 100%;
+}  
+h2, p {
+    display: block;
+    font-size: 16px;
+    line-height: 149.187%;
+    font-weight: 500;
+    width: 100%;
+}
+ul {margin-left: -40px;
+display: block;
+width: 100%;}
+   
+  li {
+    list-style: none;
+    background-image: url('icon-list.svg');
+    background-repeat: no-repeat;
+    background-position: left 14px;
+    background-size: 21px;
+    padding: 10px 40px;
+    font-size: 16px;
+    line-height: 149.187%;
+    font-weight: 500;
+    margin-top: -8px;
+}
+label {
+    display: inline-block;
+    width: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 24px auto 12px 0px;
+}
+span {
+    width: 50%;
+    display: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 24px 0px 12px auto;
+    text-align: right;
+    color: hsl(4, 100%, 67%);
+}
+input {
+    display: block;
+    height: 56px;
+    border-radius: 0.5em;
+    border: 1.5px solid hsl(231, 7%, 60%, 50%);
+    width: 100%;
+    padding: 24px;
+    font-family: inherit;
+    cursor: pointer;
+}
+input:hover {
+    border: 1.5px solid hsl(234, 29%, 20%);  
+}
+
+.inputError {
+    border: 1.5px solid hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+    background-color: hsl(346, 100%, 66%, 10%);
+}
+::placeholder {
+    color: hsl(231, 7%, 60%);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+button {
+    display:block;
+    height: 56px;
+    border-radius: 0.5em;
+    width: 100%;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+    background-image: linear-gradient(90deg, hsl(28, 95%, 63%), hsl(346, 100%, 66%));
+    animation: buttonanime 2s ease infinite;
+    background-size: 200% 200%;
+    box-shadow: 0px 10px 10px hsl(346, 100%, 66%, 30%);
+}
+
+@keyframes buttonanime {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
+.submit {
+    margin-top: 24px;
+}
+.section4 {
+    display: none;
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+
+    z-index: 5;
+    position: absolute;
+    top:0;
+}
+
+.iconsuccess {
+    margin-top: 125px;
+    margin-bottom: 32px;
+}
+
+p {margin-bottom: 260px;}
+
+.dissmiss {
+   margin-bottom: 200px; 
+}
+
+@media screen and (min-width: 450px) {
+.mobileImg2  {
+display: block;
+width: 100%;
+height: auto;
+}
+.mobileImg {display: none;}
+}
+
+@media screen and (min-width: 800px) {
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:hsl(235, 18%, 26%);
+}
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 448px;
+    width:100%;
+    max-width: 928px;
+    height: 641px;
+    height: auto;
+    border-radius: 2em;
+    padding: 24px 0 24px 24px;
+    height: 641px;
+}
+.section2 {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.mobileImg {display: none;}
+.mobileImg2 {display: none;}
+.section3 {
+    padding: 0;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 593px;
+}
+.desktopImgDiv {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 641px;
+    width: 424px;  
+    margin-left: 20px;  
+    overflow: hidden;
+}
+.desktopImg  {
+    display: block;
+    object-fit: cover;
+    height: 593px;
+    border-radius: 1em;
+    }
+    .desktopImgDiv2 {
+        position: relative;
+        bottom: 641px;
+        display: block;
+        overflow: hidden;
+        height: 593px;
+        width: 424px;
+        margin-left: 20px;
+    } 
+    .desktopImg2 { 
+    position: relative;
+    display: block;
+    width: 240px;
+    height: auto;
+    bottom: -220px;
+    right: 0px;
+
+    animation-name: img2;
+    animation-duration: 3s;
+}
+
+@keyframes img2 {
+    0% {left: -240px;}   
+    100% {left: 0;}
+    }
+    .desktopImgDiv3 {
+        position: relative;
+        right: 4px;
+        bottom: 1234px;
+        display: block;
+        overflow: hidden;  
+        height: 593px;
+        width: 424px;
+    } 
+    .desktopImg3 {
+        position: relative;
+        display: block;
+        width: 269px;
+        height: auto;
+        right: -155px;   
+        bottom:-130px;
+      
+        animation-name: img3;
+        animation-duration: 5s;  
+    }
+    
+    @keyframes img3 {
+        0% {right: -430px;}  
+        40% {right: -430px;}
+        100% {right: -155px;}
+        }
+
+        .desktopImgDiv4 {
+            position: relative;
+            right: -16px;
+            bottom: 1827px;
+            display: block;
+            overflow: hidden;   
+            height: 593px;
+            width: 424px;
+        } 
+
+    .desktopImg4 {
+            position: relative;
+            display: block;
+            width: auto;
+            height: 600px;
+            bottom: -10px;
+            animation-name: img4;
+            animation-duration: 8s;
+        }
+        
+        @keyframes img4 {
+            0% {bottom: 500px;}  
+            50% {bottom: 500px;} 
+            100% {bottom: -10px;}
+            } 
+            
+    .section4 {
+        display: none;
+        margin-inline: auto;
+        transform: translateY(26vh);
+        align-self: center;
+        background-color: white;
+        width: 504px;
+        height: 519px;
+        border-radius: 2em;
+        padding: 46px;
+        z-index: 5;
+        min-height: 519px;
+
+        outline: hsl(235, 18%, 26%) solid 50vh;
+    }
+
+    p {
+        margin-bottom: 42px;
+        margin-top: -4px;
+    }
+    
+    .iconsuccess {
+        display: block;
+        position: relative;
+        rotate: 0deg;
+        margin-top: 0px;
+        margin-bottom: 42px;
+        animation: iconSuccessanime 4s;
+    }
+    
+    @keyframes iconSuccessanime {
+        0% {rotate: 0deg; transform: scale(0.3);}  
+       /* 33% {rotate: 10deg;}
+        66% {rotate: -10deg;}*/
+        100% {rotate: 360deg;  transform: scale(1);} 
+        }
+    form {
+        position: absolute;
+        bottom: 0px;
+        width: 87.2%;
+    }
+}
+
+
+
