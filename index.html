@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
 </head>
-<body>
+<body onload="document.form1.email.focus()">
+
 <main>
   <section class="section1">
     <img class="mobileImg" src="illustration-sign-up-mobile.svg"alt="">
@@ -29,8 +30,8 @@
 </ul>
 <form  name="form1" action="#">
 <label for="email">Email address</label><span>Valid email required</span>
-<input type="email" id="email" name="email" placeholder="email@company.com">
-<button class="submit" name="validate" type="submit" onclick="ValidateEmail(document.form1.email)">Subscribe to monthly newsletter</button>
+<input class="input" type="email" name="email" placeholder="email@company.com">
+<button class="submit" name="validate" type="submit" value="" onclick="ValidateEmail(document.form1.email)">Subscribe to monthly newsletter</button>
 </form>
 
 </section>
@@ -60,6 +61,6 @@
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   Coded by <a href="#">Svitlana Suslenkova</a>.
 </div>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
