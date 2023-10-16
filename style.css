@@ -19,8 +19,9 @@ main {
     width:100%;
     height: auto;
 }
+.noMain {display: none;}
 
-.section2, .section4 {padding: 6.4%;}
+.section2 {padding: 6.4%;}
 
 .mobileImg2  {display: none;}
 .desktopImg, .desktopImg2, .desktopImg3,.desktopImg4 {display: none;}
@@ -66,14 +67,28 @@ label {
     margin: 24px auto 12px 0px;
 }
 span {
-    width: 50%;
+
     display: none;
-    font-size: 12px;
-    font-weight: 600;
-    margin: 24px 0px 12px auto;
-    text-align: right;
-    color: hsl(4, 100%, 67%);
+
 }
+.spanDisplay {
+ display: inline-block;
+ width: 50%;
+ font-size: 12px;
+ font-weight: 600;
+ margin: 24px 0px 12px auto;
+ text-align: right;
+ color: hsl(4, 100%, 67%);
+ animation-name: spanaimation;
+ animation-duration: 3s;
+}
+
+@keyframes spanaimation {
+0% {transform: scale(0.9);}   
+50% {transform: scale(1.1);}
+100% {transform: scale(1);}
+ }
+
 input {
     display: block;
     height: 56px;
@@ -129,13 +144,16 @@ button:hover {
 }
 .section4 {
     display: none;
+
+}
+.displaySection4 {
+    padding: 6.4%;
+    display: block;
     background-color: white;
     width: 100%;
     min-height: 100vh;
 
     z-index: 5;
-    position: absolute;
-    top:0;
 }
 
 .iconsuccess {
@@ -145,9 +163,6 @@ button:hover {
 
 p {margin-bottom: 260px;}
 
-.dissmiss {
-   margin-bottom: 200px; 
-}
 
 @media screen and (min-width: 450px) {
 .mobileImg2  {
@@ -290,8 +305,8 @@ main {
             
     .section4 {
         display: none;
-        margin-inline: auto;
-        transform: translateY(26vh);
+    }
+    .displaySection4 {
         align-self: center;
         background-color: white;
         width: 504px;
@@ -300,8 +315,6 @@ main {
         padding: 46px;
         z-index: 5;
         min-height: 519px;
-
-        outline: hsl(235, 18%, 26%) solid 50vh;
     }
 
     p {
