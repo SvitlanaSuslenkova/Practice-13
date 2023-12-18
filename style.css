@@ -106,7 +106,8 @@ input {
 input:hover {
     border: 1.5px solid hsl(234, 29%, 20%);  
 }
-
+input:focus, input:active, .inputError {
+    outline: none;
 .inputError {
     border: 1.5px solid hsl(4, 100%, 67%);
     color: hsl(4, 100%, 67%);
